@@ -3,6 +3,7 @@ body, html{
     padding: 0;
     margin: 0;
     background-color: rgb(215, 215, 215);
+    font-family: Arial;
 }
 
 .container{
@@ -19,7 +20,7 @@ body, html{
 }
 
 .sidebar{
-    background-color: #59a1c8;
+    background-color: #4596c2;
     grid-area: sidebar;
     display: grid;
     grid-template-rows: repeat(3, min-content);
@@ -60,7 +61,7 @@ body, html{
     width: 100%;
     display: grid;
     gap:15px;
-    grid-template: repeat(auto-fit, minmax(min-content, 170px)) / repeat(2, minmax(min-content, 275px));
+    grid-template: repeat(auto-fit, minmax(min-content, 165px)) / repeat(2, minmax(min-content, 260px));
     overflow: auto;
 }
 
@@ -76,7 +77,13 @@ body, html{
     justify-content: space-between;
 }
 
+.cardtitle{
+    font-weight: 500;
+    font-size: 14px;
+}
+
 .cardtext{
+    font-weight:lighter;
     font-size: 12px;
     color:grey;
 }
@@ -89,14 +96,22 @@ body, html{
 
 .announcements{
     grid-area: announcements;
-    background-color: white;
-    border-radius: 10px;
 }
+
 
 .trending{
     grid-area: trending;
+}
+
+.section{
+    display:flex;
+    flex-direction: column;
+}
+
+.sectionContent{
     background-color: white;
     border-radius: 10px;
+    flex: 1;
 }
 
 .brand{
@@ -136,6 +151,7 @@ body, html{
 
 .searchbar{
     display: flex;
+    align-items: center;
 }
 
 .acc{
@@ -164,6 +180,7 @@ input[type="search"]{
     grid-template-areas:
     "pic hello"
     "pic accname";
+    column-gap: 10px;
 }
 
 .pic{
@@ -175,13 +192,16 @@ input[type="search"]{
     grid-area: accname;
     align-self: start;
     margin:0;
-    font-size:20px;
+    font-size:18px;
+    font-weight: bold;
 }
 
 .hello{
     grid-area: hello;
     align-self: end;
-    margin:10px 0px;
+    font-size: 12px;
+    font-weight: bold;
+    margin:0px 0px 4px 0px;
 }
 
 .controls{
@@ -191,10 +211,14 @@ input[type="search"]{
 
 button{
     margin: 0px 25px;
+    border: 0;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #4596c2;;
+    color: white;
 }
 
 .sectionTitle{
     margin: 0 15px;
     font-size: 20px;
-
 }
