@@ -1,3 +1,5 @@
+
+
 body, html{
     height: 100%;
     padding: 0;
@@ -20,7 +22,7 @@ body, html{
 }
 
 .sidebar{
-    background-color: #3d9bcd;
+    background-color: #ea580c;
     grid-area: sidebar;
     display: grid;
     grid-template-rows: repeat(3, min-content);
@@ -35,10 +37,12 @@ body, html{
     grid-template: min-content 2fr / 6fr 4fr;
     padding: 10px 25px;
     align-items: center;
+    box-shadow: 2px 2px 5px lightgrey;
+
 }
 
 .content{
-    background-color: rgb(230, 230, 230);
+    background-color: #fff7ed;
     grid-area: main-content;
     padding:10px;
     display: grid;
@@ -65,7 +69,6 @@ body, html{
     display: grid;
     gap:15px;
     grid-template: repeat(auto-fill, minmax(min-content, 200px)) / repeat(auto-fit, minmax(min-content, 250px));
-    overflow: none;
 }
 
 .card{
@@ -85,6 +88,7 @@ body, html{
 .cardtitle{
     font-weight: 500;
     font-size: 14px;
+    margin-bottom:3px;
 }
 
 .cardtext{
@@ -111,6 +115,7 @@ body, html{
 .section{
     display:flex;
     flex-direction: column;
+    
 }
 
 .sectionContent{
@@ -119,6 +124,7 @@ body, html{
     display: flex;
     flex-direction: column;
     padding: 10px;
+    box-shadow: 2px 2px 5px lightgrey;
 }
 
 .innerContent{
@@ -130,7 +136,7 @@ body, html{
     border:none;
 }
 
-.brand{
+.x{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -140,6 +146,11 @@ body, html{
     color: white;
     font-size: 32px;
     margin: 10px;
+}
+
+.brand{
+    display:flex;
+    align-items: center;
 }
 
 .nav, .account{
@@ -155,6 +166,12 @@ body, html{
     width: 15px;
     background-color: rgb(249, 176, 176);
     margin: 0px 10px;
+}
+
+.sideIcon{
+    height: 15px;
+    width:15px;
+    margin:0 10px;
 }
 
 .navtext{
@@ -186,8 +203,9 @@ input[type="search"]{
     flex: 1;
     height: 25px;
     border: 0;
-    background-color: rgb(197, 197, 197);
+    background-color: rgb(220, 220, 220);
     border-radius: 25px;
+    padding-left:10px;
 }
 
 .welcome{
@@ -230,7 +248,7 @@ button{
     border: 0;
     padding: 10px 20px;
     border-radius: 20px;
-    background-color: #4596c2;;
+    background-color: #ea580c;
     color: white;
 }
 
@@ -239,3 +257,31 @@ button{
     font-size: 20px;
 }
 
+.accDisplay{
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 4fr;
+    grid-template-areas:
+    "ppic handle"
+    "ppic name";
+    justify-content: left;
+    align-items: center;
+}
+
+.profilePic{
+    grid-area: ppic;
+    justify-self: right;
+}
+
+.handle{
+    font-size: 14px;
+    grid-area: handle;
+    align-self: bottom;
+}
+
+.name{
+    align-self:top;
+    margin:0;
+    color:grey;
+    font-size: 10px;
+    grid-area: name
+}
