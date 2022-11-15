@@ -8,6 +8,10 @@ body, html{
     font-family: Arial;
 }
 
+a{
+    text-decoration: none;
+}
+
 .container{
     height: 100%;
     width: 100%;
@@ -37,7 +41,6 @@ body, html{
     grid-template: min-content 2fr / 6fr 4fr;
     padding: 10px 25px;
     align-items: center;
-    box-shadow: 2px 2px 5px lightgrey;
 
 }
 
@@ -85,16 +88,30 @@ body, html{
     box-shadow: 2px 2px 5px lightgrey;
 }
 
+.card:hover{
+    box-shadow: 2px 2px 5px grey;
+    transition: box-shadow .3s ease-in-out;
+}
+
 .cardtitle{
+    color: black;
     font-weight: 500;
     font-size: 14px;
-    margin-bottom:3px;
+}
+
+.cardtitle:hover{
+    text-decoration: underline;
+}
+
+.cardtitle:visited{
+    color:black;
 }
 
 .cardtext{
     font-weight:lighter;
     font-size: 12px;
     color:grey;
+    margin-top:5px;
 }
 
 .cardcontrols{
@@ -269,6 +286,11 @@ button{
     color: white;
 }
 
+button:hover{
+    background-color: #7c2d12;
+    transition: background-color 0.3s ease-in-out;
+}
+
 .sectionTitle{
     margin: 0 15px;
     font-size: 20px;
@@ -295,9 +317,14 @@ button{
 }
 
 .handle{
+    color: black;
     font-size: 14px;
     grid-area: handle;
     align-self: bottom;
+}
+
+.handle:hover{
+    text-decoration: underline;
 }
 
 .name{
@@ -308,7 +335,20 @@ button{
     grid-area: name
 }
 
-.acc>p{
-    font-weight:bold;
+.acc>a{
     font-size:16px;
+    color: black;
+    align-self: center;
+}
+
+.acc>a:hover{
+    text-decoration: underline;
+}
+
+.navtext:hover{
+    font-weight:bold;
+}
+
+.accDisplay>a{
+    
 }
